@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | Muhammad Arsyad</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="assets/profile.jpg" type="image/x-icon">
+</head>
+<body>
+    <!--Navbar-->
+    <div class="navbar" id="navbar-responsive">
+        <a href="/muharsyad.github.io/" class="name">Muhammad Arsyad</a>
+        <a href="/muharsyad.github.io/#contact" class="right">Contact</a>
+        <a href="/services/" class="right">Services</a>
+        <a href="/blog/" class="right">Blog</a>
+        <a href="/course/" class="right">Learning Hub</a>
+        <a href="/portfolio/" class="right">Portfolio</a>
+        <a href="/muharsyad.github.io/#about-me" class="right">About Me</a>
+        <a href="javascript:void(0);" class="icon" onclick="navbar()">
+            <i class="ri-menu-line"></i>
+        </a>
+    </div>
+
+    <div class="course-section">
+        <h2><i class="ri-book-open-fill"></i> Course & Learning Hub</h2>
+        <p style="margin-bottom: 30px; text-align: center;">Pelajari AI, Machine Learning, dan Data Science dengan kursus & bacaan berikut!</p>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button onclick="filterProjects('all')">Semua</button>
+            <button onclick="filterProjects('ai')">AI / Machine Learning</button>
+            <button onclick="filterProjects('nlp')">Natural Language Processing</button>
+            <button onclick="filterProjects('data')">Data Analysis</button>
+        </div>
+
+        <div class="container">
+            <div class="card" data-category="ai">
+                <span class="badge free">✅ Gratis</span>
+                <img src="assets/thumbnail-1.png" alt="">
+                <h3>📚 30 Days to Master Machine Learning</h3>
+                <p>Kursus intensif 30 hari untuk menguasai Machine Learning dari nol.</p>
+                <p><b>Format:</b> Online Course + Jupyter Notebook</p>
+                <div class="links">
+                    <a href="#"><i class="ri-play-fill"></i> Mulai Kursus</a>
+                </div>
+            </div>
+
+            <div class="card" data-category="ai">
+                <span class="badge paid">🔥 Berbayar</span>
+                <img src="assets/thumbnail-2.png" alt="">
+                <h3>🤖 Deep Learning Fundamentals</h3>
+                <p>Pahami dasar-dasar Deep Learning dan implementasi dengan TensorFlow & PyTorch.</p>
+                <p><b>Format:</b> Video + Code Examples</p>
+                <div class="links">
+                    <a href="#"><i class="ri-video-on-fill"></i> Lihat Kursus</a>
+                </div>
+            </div>
+
+            <div class="card" data-category="data">
+                <span class="badge free">✅ Gratis</span>
+                <img src="assets/thumbnail-3.png" alt="">
+                <h3>📊 Data Science for Beginners</h3>
+                <p>Pelajari teknik dasar analisis data dan visualisasi menggunakan Python.</p>
+                <p><b>Format:</b> Artikel + Praktek</p>
+                <div class="links">
+                    <a href="#"><i class="ri-book-fill"></i> Baca Materi</a>
+                </div>
+            </div>
+
+            <div class="card" data-category="ai">
+                <span class="badge paid">🔥 Berbayar</span>
+                <img src="assets/thumbnail-4.png" alt="">
+                <h3>📈 Advanced AI & ML for Risk Analysis</h3>
+                <p>Teknik canggih dalam Machine Learning untuk analisis risiko dan prediksi.</p>
+                <p><b>Format:</b> Online Course + Case Study</p>
+                <div class="links">
+                    <a href="#"><i class="ri-graduation-cap-fill"></i> Lihat Kursus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Muhammad Arsyad. All rights reserved.</p>
+            <p>"Solving Problems with AI, Data, and Mathematics"</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/muhammad-arsyad-59865120a/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                <a href="https://github.com/muharsyad" target="_blank"><i class="ri-github-fill"></i></a>
+                <a href="https://www.instagram.com/muha.rsyd/" target="_blank"><i class="ri-instagram-fill"></i></a>
+                <a href="mailto:muharsyad2201@gmail.com"><i class="ri-mail-fill"></i></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
