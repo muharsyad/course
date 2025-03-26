@@ -3,98 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses | Muhammad Arsyad</title>
+    <title>Course | Muhacode</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="assets/profile.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
 </head>
 <body>
-    <!--Navbar-->
-    <div class="navbar" id="navbar-responsive">
-        <a href="/muharsyad.github.io/" class="name">Muhammad Arsyad</a>
-        <a href="/muharsyad.github.io/#contact" class="right">Contact</a>
-        <a href="/services/" class="right">Services</a>
-        <a href="/blog/" class="right">Blog</a>
-        <a href="/course/" class="right">Learning Hub</a>
-        <a href="/portfolio/" class="right">Portfolio</a>
-        <a href="/muharsyad.github.io/#about-me" class="right">About Me</a>
-        <a href="javascript:void(0);" class="icon" onclick="navbar()">
-            <i class="ri-menu-line"></i>
-        </a>
+    <!-- NAVBAR SECTION -->
+    <div class="navbar flx-rw">
+        <div class="logo">
+            <a href="#">
+                <img src="assets/logo-nav.png" alt="">
+            </a>
+        </div>
+        <div class="nav-links flx-rw" id="navLinks">
+            <a href="#" >Home</a>
+            <a href="#" class="active">Course</a>
+            <a href="#">Service</a>
+            <a href="#">Blog</a>
+            <a href="#">Showcase</a>
+            <a href="#">Roadmap</a>
+            <a href="#">About Me</a>
+        </div>
+        <div class="nav-button flx-rw">
+            <button id="theme-toggle"><i class="ri-moon-fill"></i></button>
+            <div class="hamburger" onclick="toggleNavbar()"><i class="ri-menu-fill"></i></div>
+        </div>
     </div>
 
-    <div class="course-section">
-        <h2><i class="ri-book-open-fill"></i> Course & Learning Hub</h2>
-        <p style="margin-bottom: 30px; text-align: center;">Pelajari AI, Machine Learning, dan Data Science dengan kursus & bacaan berikut!</p>
-
-        <!-- Filter Buttons -->
-        <div class="filter-buttons">
-            <button onclick="filterProjects('all')">Semua</button>
-            <button onclick="filterProjects('ai')">AI / Machine Learning</button>
-            <button onclick="filterProjects('nlp')">Natural Language Processing</button>
-            <button onclick="filterProjects('data')">Data Analysis</button>
+    <!-- HERO SECTION -->
+    <div class="hero-section flx-cl">
+        <div class="item flx-cl">
+            <h1>Belajar Data Science & AI dari Nol Hingga Mahir</h1>
+            <p>Mulai perjalananmu dalam dunia data dan kecerdasan buatan dengan kursus gratis dari Muhacode. Akses materi berkualitas, latihan praktis, dan panduan dari mentor berpengalaman.</p>
+            <p>Belum tahu harus mulai dari mana? Lihat roadmap</p>
+            <div class="cta-btn">
+                <a href="#" class="btn-1">Lihat Roadmap</a>
+            </div>
         </div>
+        <div class="item features flx-rw">
+            <p>📖 Materi Terstruktur</p>
+            <p>🎥 Video & Artikel Interaktif</p>
+            <p>💡 Roadmap Pembelajaran</p>
+            <p>💬 Forum & Komunitas</p>
+            <p>🚀 100% Gratis!</p>
+        </div>
+    </div>
 
-        <div class="container">
-            <div class="card" data-category="ai">
-                <span class="badge free">✅ Gratis</span>
+    <!-- COURSE SECTION -->
+    <div class="course-section flx-cl">
+        <div class="item search flx-cl">
+            <h2>Pencarian Course</h2>
+            <input type="text" id="search" placeholder="Cari course...">
+        </div>
+        <div class="item card-container">
+            <div class="card-item flx-cl">
                 <img src="assets/thumbnail-1.png" alt="">
                 <h3>📚 30 Days to Master Machine Learning</h3>
                 <p>Kursus intensif 30 hari untuk menguasai Machine Learning dari nol.</p>
                 <p><b>Format:</b> Online Course + Jupyter Notebook</p>
-                <div class="links">
-                    <a href="#"><i class="ri-play-fill"></i> Mulai Kursus</a>
+                <div class="cta-btn">
+                    <a href="#" class="btn-1"><i class="ri-play-fill"></i> Mulai Kursus</a>
                 </div>
             </div>
-
-            <div class="card" data-category="ai">
-                <span class="badge paid">🔥 Berbayar</span>
-                <img src="assets/thumbnail-2.png" alt="">
-                <h3>🤖 Deep Learning Fundamentals</h3>
-                <p>Pahami dasar-dasar Deep Learning dan implementasi dengan TensorFlow & PyTorch.</p>
-                <p><b>Format:</b> Video + Code Examples</p>
-                <div class="links">
-                    <a href="#"><i class="ri-video-on-fill"></i> Lihat Kursus</a>
+            <div class="card-item flx-cl">
+                <img src="assets/thumbnail-1.png" alt="">
+                <h3>📚 30 Days to Master Machine Learning</h3>
+                <p>Kursus intensif 30 hari untuk menguasai Machine Learning dari nol.</p>
+                <p><b>Format:</b> Online Course + Jupyter Notebook</p>
+                <div class="cta-btn">
+                    <a href="#" class="btn-1"><i class="ri-play-fill"></i> Mulai Kursus</a>
                 </div>
             </div>
-
-            <div class="card" data-category="data">
-                <span class="badge free">✅ Gratis</span>
-                <img src="assets/thumbnail-3.png" alt="">
-                <h3>📊 Data Science for Beginners</h3>
-                <p>Pelajari teknik dasar analisis data dan visualisasi menggunakan Python.</p>
-                <p><b>Format:</b> Artikel + Praktek</p>
-                <div class="links">
-                    <a href="#"><i class="ri-book-fill"></i> Baca Materi</a>
+            <div class="card-item flx-cl">
+                <img src="assets/thumbnail-1.png" alt="">
+                <h3>📚 30 Days to Master Machine Learning</h3>
+                <p>Kursus intensif 30 hari untuk menguasai Machine Learning dari nol.</p>
+                <p><b>Format:</b> Online Course + Jupyter Notebook</p>
+                <div class="cta-btn">
+                    <a href="#" class="btn-1"><i class="ri-play-fill"></i> Mulai Kursus</a>
                 </div>
             </div>
-
-            <div class="card" data-category="ai">
-                <span class="badge paid">🔥 Berbayar</span>
-                <img src="assets/thumbnail-4.png" alt="">
-                <h3>📈 Advanced AI & ML for Risk Analysis</h3>
-                <p>Teknik canggih dalam Machine Learning untuk analisis risiko dan prediksi.</p>
-                <p><b>Format:</b> Online Course + Case Study</p>
-                <div class="links">
-                    <a href="#"><i class="ri-graduation-cap-fill"></i> Lihat Kursus</a>
+            <div class="card-item flx-cl">
+                <img src="assets/thumbnail-1.png" alt="">
+                <h3>📚 30 Days to Master Machine Learning</h3>
+                <p>Kursus intensif 30 hari untuk menguasai Machine Learning dari nol.</p>
+                <p><b>Format:</b> Online Course + Jupyter Notebook</p>
+                <div class="cta-btn">
+                    <a href="#" class="btn-1"><i class="ri-play-fill"></i> Mulai Kursus</a>
                 </div>
             </div>
+            
         </div>
     </div>
 
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2025 Muhammad Arsyad. All rights reserved.</p>
-            <p>"Solving Problems with AI, Data, and Mathematics"</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/muhammad-arsyad-59865120a/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
-                <a href="https://github.com/muharsyad" target="_blank"><i class="ri-github-fill"></i></a>
-                <a href="https://www.instagram.com/muha.rsyd/" target="_blank"><i class="ri-instagram-fill"></i></a>
-                <a href="mailto:muharsyad2201@gmail.com"><i class="ri-mail-fill"></i></i></a>
+    <!-- FOOTER SECTION -->
+    <div class="footer-section flx-cl">
+        <div class="item flx-rw">
+            <div class="item muhacode">
+                <img src="assets/logo-nav.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempora illo pariatur delectus veniam earum unde libero eum sequi numquam.</p>
+                <div class="flx-rw social-icons">
+                    <a href="https://www.linkedin.com/in/muhammad-arsyad-59865120a/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="https://github.com/muharsyad" target="_blank"><i class="ri-github-fill"></i></a>
+                    <a href="https://www.instagram.com/muha.rsyd/" target="_blank"><i class="ri-instagram-fill"></i></a>
+                    <a href="mailto:muharsyad2201@gmail.com"><i class="ri-mail-fill"></i></i></a>
+                </div>
+            </div>
+            <div class="item flx-cl">
+                <h4>Navigation</h4>
+                <a href="#">Course</a>
+                <a href="#">Roadmap</a>
+                <a href="#">Showcase</a>
+                <a href="#">Blog</a>
+                <a href="#">Service</a>
+                <a href="#">About Me</a>
+            </div>
+            <div class="item flx-cl">
+                <h4>Contact</h4>
+                <p>Email: <a href="#">hello.muhacode@gmail.com</a></p>
+                <p>Phone: <a href="#">+6282324761705</a></p>
+                <p>location: Banyumas, Jawa Tengah, Indonesia</p>
             </div>
         </div>
-    </footer>
-
-    <script src="js/main.js"></script>
+        <div class="item line"></div>
+        <div class="copy-right">
+            <p>&copy 2024 Muhacode. All Rights Reserved.</p>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
 </body>
 </html>
