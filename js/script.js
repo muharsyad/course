@@ -34,34 +34,40 @@ function toggleNavbar() {
 
 const courses = [
     {
-        title: "30 Days to Master Machine Learning",
-        description: "Kursus intensif 30 hari untuk menguasai Machine Learning dari nol.",
+        title: "Pemrograman Python",
+        description: "Pelajari pemrograman python dari dasar hingga mahir dengan kurikulum terstruktur!",
         format: "Online Course + Jupyter Notebook",
-        img: "assets/thumbnail-1.png"
-    },
-    {
-        title: "python programming",
-        description: "Kursus intensif 30 hari untuk menguasai Machine Learning dari nol.",
+        img: "assets/python.png"
+    },{
+        title: "Statistik untuk Machine learning",
+        description: "Pelajari statistika dari dasar hingga mahir dengan kurikulum terstruktur!",
         format: "Online Course + Jupyter Notebook",
-        img: "assets/thumbnail-2.png"
-    },
-    {
-        title: "30 Days to Master Machine Learning",
-        description: "Kursus intensif 30 hari untuk menguasai Machine Learning dari nol.",
+        img: "assets/statistics.png"
+    },{
+        title: "Natural Language Processing",
+        description: "Pelajari NLP dari dasar hingga mahir dengan kurikulum terstruktur!",
         format: "Online Course + Jupyter Notebook",
-        img: "assets/thumbnail-3.png"
-    },
-    {
-        title: "30 Days to Master Machine Learning",
-        description: "Kursus intensif 30 hari untuk menguasai Machine Learning dari nol.",
+        img: "assets/nlp.png"
+    },{
+        title: "Matematika untuk Machine Learning",
+        description: "Pelajari matematika dari dasar hingga mahir dengan kurikulum terstruktur!",
         format: "Online Course + Jupyter Notebook",
-        img: "assets/thumbnail-4.png"
-    },
-    {
-        title: "30 Days to Master Machine Learning",
-        description: "Kursus intensif 30 hari untuk menguasai Machine Learning dari nol.",
+        img: "assets/math.png"
+    },{
+        title: "Jaringan Saraf Tiruan (Pendahuluan)",
+        description: "Pelajari JST dari dasar hingga mahir dengan kurikulum terstruktur!",
         format: "Online Course + Jupyter Notebook",
-        img: "assets/thumbnail-1.png"
+        img: "assets/intro-ann.png"
+    },{
+        title: "Sistem Manajemen Database (SQL)",
+        description: "Pelajari sistem manajemen database dengan SQL dari dasar hingga mahir dengan kurikulum terstruktur!",
+        format: "Online Course + Jupyter Notebook",
+        img: "assets/dbms-sql.png"
+    },{
+        title: "Visualisasi Data",
+        description: "Pelajari visualisasi data dari dasar hingga mahir dengan kurikulum terstruktur!",
+        format: "Online Course + Jupyter Notebook",
+        img: "assets/data-visualization.png"
     },
     // Tambahkan course lain jika ada
 ];
@@ -87,7 +93,7 @@ document.getElementById("search").addEventListener("input", function () {
         container.innerHTML += `
             <div class="card-item flx-cl">
                 <img src="${course.img}" alt="">
-                <h3>📚 ${course.title}</h3>
+                <h3>${course.title}</h3>
                 <p>${course.description}</p>
                 <p><b>Format:</b> ${course.format}</p>
                 <div class="cta-btn">
