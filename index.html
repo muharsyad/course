@@ -1,167 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course | Muhacode</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
+    <title>Course Library - Muhacode</title>
+    <link rel="stylesheet" href="styles/course.css">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    <!-- NAVBAR SECTION -->
-    <div class="navbar flx-rw">
-        <div class="logo">
-            <a href="#">
-                <img src="assets/logo-nav.png" alt="">
-            </a>
-        </div>
-        <div class="nav-links flx-rw" id="navLinks">
-            <a href="../muharsyad.github.io/">Beranda</a>
-            <a href="../course" class="active">Kursus</a>
-            <a href="../service">Layanan</a>
-            <a href="../blog">Blog</a>
-            <a href="../portfolio">Portofolio</a>
-            <a href="../roadmap">Peta Jalan</a>
-            <a href="../muharsyad.github.io/#aboutme">Tentang</a>
-        </div>
-        <div class="nav-button flx-rw">
-            <a href="en" class="btn-lang">EN</a>
-            <button id="theme-toggle"><i class="ri-moon-fill"></i></button>
-            <div class="hamburger" onclick="toggleNavbar()"><i class="ri-menu-fill"></i></div>
-        </div>
+    <!-- Background Math Symbols -->
+    <div class="math-bg-container">
+        <div class="math-symbol animate-float" style="font-size: 4rem; top: 10%; left: 5%;">∫</div>
+        <div class="math-symbol animate-float-delayed" style="font-size: 3rem; top: 20%; right: 10%;">∑</div>
+        <div class="math-symbol animate-float" style="font-size: 3.5rem; bottom: 15%; left: 20%;">π</div>
+        <div class="math-symbol animate-float-delayed" style="font-size: 4rem; bottom: 30%; right: 5%;">λ</div>
+        <div class="math-symbol" style="font-size: 2.5rem; top: 40%; left: 50%; opacity: 0.1;">f(x)</div>
     </div>
 
-    <!-- HERO SECTION -->
-    <div class="hero-section flx-cl">
-        <div class="item flx-cl">
-            <h1>Belajar Data Science & AI dari Nol Hingga Mahir</h1>
-            <p>Mulai perjalananmu dalam dunia data dan kecerdasan buatan dengan kursus gratis dari Muhacode. Akses materi berkualitas, latihan praktis, dan panduan dari mentor berpengalaman.</p>
-            <p>Belum tahu harus mulai dari mana? Lihat roadmap</p>
-            <div class="cta-btn">
-                <a href="../roadmap" class="btn-1">Lihat Roadmap</a>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="container nav-content">
+            <div class="logo font-mono">
+                <a href="#">
+                    <span style="color: var(--brand-primary)">&lt;</span>Muha<span style="color: white">Code</span><span
+                        style="color: var(--brand-primary)">/&gt;</span>
+                </a>
             </div>
-        </div>
-        <div class="item features flx-rw">
-            <p>📖 Materi Terstruktur</p>
-            <p>🎥 Video & Artikel Interaktif</p>
-            <p>💡 Roadmap Pembelajaran</p>
-            <p>💬 Forum & Komunitas</p>
-            <p>🚀 100% Gratis!</p>
-        </div>
-    </div>
 
-    <!-- COURSE SECTION -->
-    <div class="course-section flx-cl">
-        <div class="item search flx-cl">
-            <h2>Pencarian Kursus</h2>
-            <input type="text" id="search" placeholder="Cari course...">
-        </div>
-        <div class="item card-container">
-            <div class="card-item flx-cl">
-                <img src="assets/python.png" alt="">
-                <h3>Pemrograman Python</h3>
-                <p>Pelajari pemrograman python dari dasar hingga mahir dengan kurikulum terstruktur!</p>
-                <p><b>Format:</b> Online Course + Jupyter Notebook</p>
-                <div class="cta-btn">
-                    <a href="#" class="btn-1"><i class="ri-play-fill"></i> Mulai Kursus</a>
-                </div>
-            </div>
-            <div class="card-item flx-cl">
-                <img src="assets/statistics.png" alt="">
-                <h3>Statistika untuk Machine Learning</h3>
-                <p>Pelajari statistika dari dasar hingga mahir dengan kurikulum terstruktur!</p>
-                <p><b>Format:</b> Online Course + Jupyter Notebook</p>
-                <div class="cta-btn">
-                    <a href="#" class="btn-1"><i class="ri-play-fill"></i> Mulai Kursus</a>
-                </div>
-            </div>
-            <div class="card-item flx-cl">
-                <img src="assets/nlp.png" alt="">
-                <h3>Natural Language Processing</h3>
-                <p>Pelajari NLP dari dasar hingga mahir dengan kurikulum terstruktur!</p>
-                <p><b>Format:</b> Online Course + Jupyter Notebook</p>
-                <div class="cta-btn">
-                    <a href="#" class="btn-1"><i class="ri-play-fill"></i> Mulai Kursus</a>
-                </div>
-            </div>
-            <div class="card-item flx-cl">
-                <img src="assets/math.png" alt="">
-                <h3>Matematika untuk Machine Learning</h3>
-                <p>Pelajari matematika dari dasar hingga mahir dengan kurikulum terstruktur!</p>
-                <p><b>Format:</b> Online Course + Jupyter Notebook</p>
-                <div class="cta-btn">
-                    <a href="#" class="btn-1"><i class="ri-play-fill"></i> Mulai Kursus</a>
-                </div>
-            </div>
-            <div class="card-item flx-cl">
-                <img src="assets/intro-ann.png" alt="">
-                <h3>Jaringan Saraf Tiruan (Pendahuluan)</h3>
-                <p>Pelajari JST dari dasar hingga mahir dengan kurikulum terstruktur!</p>
-                <p><b>Format:</b> Online Course + Jupyter Notebook</p>
-                <div class="cta-btn">
-                    <a href="#" class="btn-1"><i class="ri-play-fill"></i> Mulai Kursus</a>
-                </div>
-            </div>
-            <div class="card-item flx-cl">
-                <img src="assets/dbms-sql.png" alt="">
-                <h3>Sistem Manajemen Database (SQL)</h3>
-                <p>Pelajari sistem manajemen database dengan SQL dari dasar hingga mahir dengan kurikulum terstruktur!</p>
-                <p><b>Format:</b> Online Course + Jupyter Notebook</p>
-                <div class="cta-btn">
-                    <a href="#" class="btn-1"><i class="ri-play-fill"></i> Mulai Kursus</a>
-                </div>
-            </div>
-            <div class="card-item flx-cl">
-                <img src="assets/data-visualization.png" alt="">
-                <h3>Visualisasi Data</h3>
-                <p>Pelajari visualisasi data dari dasar hingga mahir dengan kurikulum terstruktur!</p>
-                <p><b>Format:</b> Online Course + Jupyter Notebook</p>
-                <div class="cta-btn">
-                    <a href="#" class="btn-1"><i class="ri-play-fill"></i> Mulai Kursus</a>
-                </div>
-            </div>
-            
-        </div>
-    </div>
+            <ul class="nav-links font-mono">
+                <li><a href="../muharsyad.github.io">Home</a></li>
+                <li><a href="../roadmap">Roadmap</a></li>
+                <li><a href="../service">Layanan</a></li>
+                <li><a href="../portfolio">Portofolio</a></li>
+                <li><a href="../blog">Blog</a></li>
+            </ul>
 
-    <!-- FOOTER SECTION -->
-    <div class="footer-section flx-cl">
-        <div class="item flx-rw">
-            <div class="item muhacode">
-                <img src="assets/logo-nav.png" alt="">
-                <p>Muhacode adalah platform edukasi daring yang menyediakan kursus gratis seputar Matematika, Data Science, dan Kecerdasan Buatan. Kami juga menawarkan layanan profesional untuk membantu individu dan bisnis dalam dunia digital berbasis data.</p>
-                <div class="flx-rw social-icons">
-                    <a href="https://www.linkedin.com/in/muhammad-arsyad-59865120a/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
-                    <a href="https://github.com/muharsyad" target="_blank"><i class="ri-github-fill"></i></a>
-                    <a href="https://www.instagram.com/muha.rsyd/" target="_blank"><i class="ri-instagram-fill"></i></a>
-                    <a href="mailto:muharsyad2201@gmail.com"><i class="ri-mail-fill"></i></i></a>
-                    <a href="https://arsyadmuh.medium.com" target="_blank"><i class="ri-medium-fill"></i></a>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <div class="desktop-only">
+                    <a href="../contact" class="btn btn-primary"
+                        style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Tentang Saya</a>
+                </div>
+
+                <button class="mobile-menu-btn" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div class="mobile-menu-panel font-mono" id="mobile-menu">
+            <a href="../muharsyad.github.io" onclick="toggleMenu()">Home</a>
+            <a href="../roadmap" onclick="toggleMenu()">roadmap</a>
+            <a href="../service" onclick="toggleMenu()">Layanan</a>
+            <a href="../portfolio" onclick="toggleMenu()">Portofolio</a>
+            <a href="../contact" onclick="toggleMenu()" style="color: var(--brand-primary); font-weight: bold;">Tentang
+                Saya</a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <h1>Kurikulum <span style="color: var(--brand-primary)">Komprehensif</span></h1>
+            <p>Pilih jalur belajarmu. Dari fundamental matematika hingga implementasi AI modern.</p>
+        </div>
+    </header>
+
+    <!-- FILTER BAR -->
+    <section class="filter-section" id="filter-bar">
+        <div class="container">
+            <div class="filter-container">
+                <!-- Category Buttons -->
+                <div class="filter-group">
+                    <button onclick="filterCourses('all')" class="filter-btn active" id="btn-all">All</button>
+                    <button onclick="filterCourses('math')" class="filter-btn" id="btn-math">Mathematics</button>
+                    <button onclick="filterCourses('python')" class="filter-btn" id="btn-python">Python</button>
+                    <button onclick="filterCourses('data')" class="filter-btn" id="btn-data">Data Science</button>
+                    <button onclick="filterCourses('ai')" class="filter-btn" id="btn-ai">AI & ML</button>
+                </div>
+
+                <!-- Search Input -->
+                <div class="search-wrapper">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" onkeyup="searchCourses()" placeholder="Cari materi...">
                 </div>
             </div>
-            <div class="item flx-cl">
-                <h4>Navigasi</h4>
-                <a href="../course">Course</a>
-                <a href="../roadmap">Peta Jalan</a>
-                <a href="../portfolio">Portofolio</a>
-                <a href="../blog">Blog</a>
-                <a href="../service">Layanan</a>
-                <a href="../muharsyad.github.io/#aboutme">Tentang</a>
-            </div>
-            <div class="item flx-cl">
-                <h4>Kontak</h4>
-                <p>Email: <a href="mailto:hello.muhacode@gmail.com">hello.muhacode@gmail.com</a></p>
-                <p>Phone: <a href="https://wa.me/+6282324761705">+6282324761705</a></p>
-                <p>location: Banyumas, Jawa Tengah, Indonesia</p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <div class="container">
+            <div id="courseGrid" class="course-grid">
+
+                <!-- Course 1: Math -->
+                <div class="course-card" data-category="math" style="--card-color: var(--brand-primary);">
+                    <div class="course-thumb">
+                        <span class="symbol font-mono">∫ dx</span>
+                        <div class="badge-premium">PREMIUM</div>
+                    </div>
+                    <div class="course-body">
+                        <div class="tag-row">
+                            <span class="tag tag-blue font-mono">Math</span>
+                            <span class="tag tag-amber font-mono">Beginner</span>
+                        </div>
+                        <h3>Kalkulus untuk Data Science</h3>
+                        <p>Pelajari limit, turunan, dan integral dengan fokus pada aplikasinya dalam algoritma optimasiAI.</p>
+                        <div class="card-footer">
+                            <div class="meta-info"><i class="far fa-clock"></i> 8 Jam</div>
+                            <a href="#" class="btn-link-animated" style="font-size: 0.875rem; font-family: 'JetBrains Mono';">Detail &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2: Python -->
+                <div class="course-card" data-category="python" style="--card-color: #60A5FA;">
+                    <div class="course-thumb">
+                        <i class="fab fa-python"></i>
+                        <div class="badge-free">FREE</div>
+                    </div>
+                    <div class="course-body">
+                        <div class="tag-row">
+                            <span class="tag tag-blue font-mono">Python</span>
+                            <span class="tag tag-amber font-mono">Fundamental</span>
+                        </div>
+                        <h3>Python from Scratch</h3>
+                        <p>Panduan lengkap Python. Dari variabel, loop, hingga konsep Object Oriented Programming (OOP).</p>
+                        <div class="card-footer">
+                            <div class="meta-info"><i class="far fa-clock"></i> 12 Jam</div>
+                            <a href="#" class="btn-link-animated" style="font-size: 0.875rem; font-family: 'JetBrains Mono';">Mulai Belajar &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3: Data -->
+                <div class="course-card" data-category="data" style="--card-color: #34d399;">
+                    <div class="course-thumb">
+                        <i class="fas fa-database"></i>
+                        <div class="badge-premium">PREMIUM</div>
+                    </div>
+                    <div class="course-body">
+                        <div class="tag-row">
+                            <span class="tag tag-blue font-mono">Data</span>
+                            <span class="tag tag-amber font-mono">Intemediate</span>
+                        </div>
+                        <h3>Mastering Pandas & SQL</h3>
+                        <p>Teknik wrangling data tingkat lanjut. Gabungkan kekuatan Python Pandas dan SQL Query.</p>
+                        <div class="card-footer">
+                            <div class="meta-info"><i class="far fa-clock"></i> 10 Jam</div>
+                            <a href="#" class="btn-link-animated" style="font-size: 0.875rem; font-family: 'JetBrains Mono';">Detail &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4: Math -->
+                <div class="course-card" data-category="math" style="--card-color: #fb923c;">
+                    <div class="course-thumb">
+                        <span class="symbol font-mono">A x = b</span>
+                        <div class="badge-premium">PREMIUM</div>
+                    </div>
+                    <div class="course-body">
+                        <div class="tag-row">
+                            <span class="tag tag-blue font-mono">Math</span>
+                            <span class="tag tag-amber font-mono">Hard</span>
+                        </div>
+                        <h3>Aljabar Linear untuk ML</h3>
+                        <p>Pahami vektor, matriks, eigen-value, dan dekomposisi yang menjadi jantung Neural Network.</p>
+                        <div class="card-footer">
+                            <div class="meta-info"><i class="far fa-clock"></i> 15 Jam</div>
+                            <a href="#" class="btn-link-animated" style="font-size: 0.875rem; font-family: 'JetBrains Mono';">Detail &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 5: AI -->
+                <div class="course-card" data-category="ai" style="--card-color: var(--brand-primary);">
+                    <div class="course-thumb">
+                        <i class="fas fa-brain"></i>
+                        <div class="badge-premium">PREMIUM</div>
+                    </div>
+                    <div class="course-body">
+                        <div class="tag-row">
+                            <span class="tag tag-blue font-mono">AI</span>
+                            <span class="tag tag-amber font-mono">Advanced</span>
+                        </div>
+                        <h3>Intro to Deep Learning</h3>
+                        <p>Membangun Neural Network pertama Anda menggunakan PyTorch. Studi kasus: Computer Vision.</p>
+                        <div class="card-footer">
+                            <div class="meta-info"><i class="far fa-clock"></i> 20 Jam</div>
+                            <a href="#" class="btn-link-animated" style="font-size: 0.875rem; font-family: 'JetBrains Mono';">Detail &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 6: Data -->
+                <div class="course-card" data-category="math" style="--card-color: #fb923c;">
+                    <div class="course-thumb">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="badge-premium">PREMIUM</div>
+                    </div>
+                    <div class="course-body">
+                        <div class="tag-row">
+                            <span class="tag tag-blue font-mono">Viz</span>
+                            <span class="tag tag-amber font-mono">Intermediate</span>
+                        </div>
+                        <h3>Data Storytelling</h3>
+                        <p>Bukan sekadar grafik. Pelajari cara mengomunikasikan insight data kepada stakeholder.</p>
+                        <div class="card-footer">
+                            <div class="meta-info"><i class="far fa-clock"></i> 6 Jam</div>
+                            <a href="#" class="btn-link-animated" style="font-size: 0.875rem; font-family: 'JetBrains Mono';">Detail &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Empty State -->
+                <div id="noResults" class="hidden">
+                    <i class="fas fa-search"></i>
+                    <p>Course tidak ditemukan. Coba kata kunci lain.</p>
+                </div>
+
             </div>
         </div>
-        <div class="item line"></div>
-        <div class="copy-right">
-            <p>&copy 2025 Muhacode. All Rights Reserved.</p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-logo font-mono">
+                        &lt;MuhaCode/&gt;
+                    </a>
+                    <p class="footer-text">Membangun pemahaman teknologi melalui fondasi matematika yang kuat. Belajar
+                        coding bukan sekadar menghafal sintaks, tapi memahami logika.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="course">Course</a></li>
+                        <li><a href="roadmap">Roadmap</a></li>
+                        <li><a href="service">Layanan</a></li>
+                        <li><a href="portfolio">Portofolio</a></li>
+                        <li><a href="blog">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Social</h4>
+                    <div class="social-row">
+                        <a href="#" style="--icon-color: #fff"><i class="fab fa-github"></i></a>
+                        <a href="#" style="--icon-color: #3b82f6"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="--icon-color: #f56565"><i class="fab fa-youtube"></i></a>
+                        <a href="#" style="--icon-color: #E91E63"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Muhacode. All rights reserved.</p>
+                <p class="font-mono" style="color: #374151;">Code is just applied Math & Logic.</p>
+            </div>
         </div>
-    </div>
-    
-    <script src="js/script.js"></script>
+    </footer>
+
+    <script src="js/course.js"></script>
 </body>
+
 </html>
