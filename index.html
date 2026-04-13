@@ -1,52 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Library - Muhacode</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
 
-    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <!-- Background Math Symbols -->
-    <div class="math-bg-container">
-        <div class="math-symbol animate-float" style="font-size: 4rem; top: 10%; left: 5%;">∫</div>
-        <div class="math-symbol animate-float-delayed" style="font-size: 3rem; top: 20%; right: 10%;">∑</div>
-        <div class="math-symbol animate-float" style="font-size: 3.5rem; bottom: 15%; left: 20%;">π</div>
-        <div class="math-symbol animate-float-delayed" style="font-size: 4rem; bottom: 30%; right: 5%;">λ</div>
-        <div class="math-symbol" style="font-size: 2.5rem; top: 40%; left: 50%; opacity: 0.1;">f(x)</div>
-    </div>
-
-    <!-- NAVBAR -->
     <nav id="navbar">
         <div class="container nav-content">
             <div class="logo font-mono">
                 <a href="#">
-                    <span style="color: var(--brand-primary)">&lt;</span>Muha<span style="color: white">Code</span><span
-                        style="color: var(--brand-primary)">/&gt;</span>
+                    <span style="color: var(--brand-primary)">&lt;</span>Muha<span style="color: white">Code</span><span style="color: var(--brand-primary)">/&gt;</span>
                 </a>
             </div>
 
             <ul class="nav-links font-mono">
-                <li><a href="../muharsyad.github.io">Home</a></li>
-                <li><a href="../roadmap">Roadmap</a></li>
-                <li><a href="../service">Layanan</a></li>
-                <li><a href="../portfolio">Portofolio</a></li>
-                <li><a href="../blog">Blog</a></li>
+                <li><a href="https://muhacode.com">Home</a></li>
+                <li><a href="../roadmap/">Roadmap</a></li>
+                <li><a href="../portfolio/">Portofolio</a></li>
+                <li><a href="../service/">Layanan</a></li>
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="../resource/">Resource</a></li>
+                <li><a href="../donate/">Donasi</a></li>
             </ul>
 
             <div style="display: flex; align-items: center; gap: 1rem;">
                 <div class="desktop-only">
-                    <a href="../contact" class="btn btn-primary"
-                        style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Tentang Saya</a>
+                    <a href="../profile/" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Tentang Saya</a>
                 </div>
 
                 <button class="mobile-menu-btn" onclick="toggleMenu()">
@@ -55,18 +44,18 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
         <div class="mobile-menu-panel font-mono" id="mobile-menu">
-            <a href="../muharsyad.github.io" onclick="toggleMenu()">Home</a>
-            <a href="../roadmap" onclick="toggleMenu()">roadmap</a>
-            <a href="../service" onclick="toggleMenu()">Layanan</a>
-            <a href="../portfolio" onclick="toggleMenu()">Portofolio</a>
-            <a href="../contact" onclick="toggleMenu()" style="color: var(--brand-primary); font-weight: bold;">Tentang
-                Saya</a>
+            <a href="https://muhacode.com">Home</a>
+            <a href="../roadmap/" onclick="toggleMenu()">Roadmap</a>
+            <a href="../portfolio/" onclick="toggleMenu()">Portofolio</a>
+            <a href="../service/" onclick="toggleMenu()">Layanan</a>
+            <a href="../blog/" onclick="toggleMenu()">Blog</a>
+            <a href="../resource/" onclick="toggleMenu()">Resource</a>
+            <a href="../donate/" onclick="toggleMenu()">Donasi</a>
+            <a href="../profile/" onclick="toggleMenu()" style="color: var(--brand-primary); font-weight: bold;">Tentang Saya</a>
         </div>
     </nav>
 
-    <!-- HEADER -->
     <header>
         <div class="container">
             <h1>Kurikulum <span style="color: var(--brand-primary)">Komprehensif</span></h1>
@@ -74,11 +63,9 @@
         </div>
     </header>
 
-    <!-- FILTER BAR -->
     <section class="filter-section" id="filter-bar">
         <div class="container">
             <div class="filter-container">
-                <!-- Category Buttons -->
                 <div class="filter-group">
                     <button onclick="filterCourses('all')" class="filter-btn active" id="btn-all">All</button>
                     <button onclick="filterCourses('math')" class="filter-btn" id="btn-math">Mathematics</button>
@@ -87,7 +74,6 @@
                     <button onclick="filterCourses('ai')" class="filter-btn" id="btn-ai">AI & ML</button>
                 </div>
 
-                <!-- Search Input -->
                 <div class="search-wrapper">
                     <i class="fas fa-search"></i>
                     <input type="text" id="searchInput" onkeyup="searchCourses()" placeholder="Cari materi...">
@@ -96,12 +82,9 @@
         </div>
     </section>
 
-    <!-- MAIN CONTENT -->
     <main>
         <div class="container">
             <div id="courseGrid" class="course-grid">
-
-                <!-- Course 1: Math -->
                 <div class="course-card" data-category="math" style="--card-color: var(--brand-primary);">
                     <div class="course-thumb">
                         <span class="symbol font-mono">∫ dx</span>
@@ -113,15 +96,14 @@
                             <span class="tag tag-amber font-mono">Beginner</span>
                         </div>
                         <h3>Kalkulus untuk Data Science</h3>
-                        <p>Pelajari limit, turunan, dan integral dengan fokus pada aplikasinya dalam algoritma optimasiAI.</p>
+                        <p>Pelajari limit, turunan, dan integral dengan fokus pada aplikasinya dalam algoritma optimasi AI.</p>
                         <div class="card-footer">
                             <div class="meta-info"><i class="far fa-clock"></i> 8 Jam</div>
-                            <a href="#" class="btn-link-animated" style="font-size: 0.875rem; font-family: 'JetBrains Mono';">Detail &rarr;</a>
+                            <a href="#" class="btn-link-animated">Detail &rarr;</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Course 2: Python -->
                 <div class="course-card" data-category="python" style="--card-color: #60A5FA;">
                     <div class="course-thumb">
                         <i class="fab fa-python"></i>
@@ -136,12 +118,11 @@
                         <p>Panduan lengkap Python. Dari variabel, loop, hingga konsep Object Oriented Programming (OOP).</p>
                         <div class="card-footer">
                             <div class="meta-info"><i class="far fa-clock"></i> 12 Jam</div>
-                            <a href="#" class="btn-link-animated" style="font-size: 0.875rem; font-family: 'JetBrains Mono';">Mulai Belajar &rarr;</a>
+                            <a href="#" class="btn-link-animated">Mulai Belajar &rarr;</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Course 3: Data -->
                 <div class="course-card" data-category="data" style="--card-color: #34d399;">
                     <div class="course-thumb">
                         <i class="fas fa-database"></i>
@@ -156,12 +137,11 @@
                         <p>Teknik wrangling data tingkat lanjut. Gabungkan kekuatan Python Pandas dan SQL Query.</p>
                         <div class="card-footer">
                             <div class="meta-info"><i class="far fa-clock"></i> 10 Jam</div>
-                            <a href="#" class="btn-link-animated" style="font-size: 0.875rem; font-family: 'JetBrains Mono';">Detail &rarr;</a>
+                            <a href="#" class="btn-link-animated">Detail &rarr;</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Course 4: Math -->
                 <div class="course-card" data-category="math" style="--card-color: #fb923c;">
                     <div class="course-thumb">
                         <span class="symbol font-mono">A x = b</span>
@@ -176,12 +156,11 @@
                         <p>Pahami vektor, matriks, eigen-value, dan dekomposisi yang menjadi jantung Neural Network.</p>
                         <div class="card-footer">
                             <div class="meta-info"><i class="far fa-clock"></i> 15 Jam</div>
-                            <a href="#" class="btn-link-animated" style="font-size: 0.875rem; font-family: 'JetBrains Mono';">Detail &rarr;</a>
+                            <a href="#" class="btn-link-animated">Detail &rarr;</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Course 5: AI -->
                 <div class="course-card" data-category="ai" style="--card-color: var(--brand-primary);">
                     <div class="course-thumb">
                         <i class="fas fa-brain"></i>
@@ -196,12 +175,11 @@
                         <p>Membangun Neural Network pertama Anda menggunakan PyTorch. Studi kasus: Computer Vision.</p>
                         <div class="card-footer">
                             <div class="meta-info"><i class="far fa-clock"></i> 20 Jam</div>
-                            <a href="#" class="btn-link-animated" style="font-size: 0.875rem; font-family: 'JetBrains Mono';">Detail &rarr;</a>
+                            <a href="#" class="btn-link-animated">Detail &rarr;</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Course 6: Data -->
                 <div class="course-card" data-category="math" style="--card-color: #fb923c;">
                     <div class="course-thumb">
                         <i class="fas fa-chart-line"></i>
@@ -216,22 +194,19 @@
                         <p>Bukan sekadar grafik. Pelajari cara mengomunikasikan insight data kepada stakeholder.</p>
                         <div class="card-footer">
                             <div class="meta-info"><i class="far fa-clock"></i> 6 Jam</div>
-                            <a href="#" class="btn-link-animated" style="font-size: 0.875rem; font-family: 'JetBrains Mono';">Detail &rarr;</a>
+                            <a href="#" class="btn-link-animated">Detail &rarr;</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Empty State -->
                 <div id="noResults" class="hidden">
                     <i class="fas fa-search"></i>
                     <p>Course tidak ditemukan. Coba kata kunci lain.</p>
                 </div>
-
             </div>
         </div>
     </main>
 
-    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -239,26 +214,36 @@
                     <a href="#" class="footer-logo font-mono">
                         &lt;MuhaCode/&gt;
                     </a>
-                    <p class="footer-text">Membangun pemahaman teknologi melalui fondasi matematika yang kuat. Belajar
-                        coding bukan sekadar menghafal sintaks, tapi memahami logika.</p>
+                    <p class="footer-text">Membangun pemahaman teknologi melalui fondasi matematika yang kuat. Belajar coding bukan sekadar menghafal sintaks, tapi memahami logika.</p>
                 </div>
+                
                 <div>
                     <h4 class="footer-title">Navigasi</h4>
                     <ul class="footer-links">
-                        <li><a href="course">Course</a></li>
-                        <li><a href="roadmap">Roadmap</a></li>
-                        <li><a href="service">Layanan</a></li>
-                        <li><a href="portfolio">Portofolio</a></li>
-                        <li><a href="blog">Blog</a></li>
+                        <li><a href="../course/">Course</a></li>
+                        <li><a href="../roadmap/">Roadmap</a></li>
+                        <li><a href="../service/">Layanan</a></li>
+                        <li><a href="../portfolio/">Portofolio</a></li>
+                        <li><a href="../blog/">Blog</a></li>
                     </ul>
                 </div>
+
+                <div style="display: none;">
+                    <h4 class="footer-title">Donasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-heart" style="color: #f56565; margin-right: 5px;"></i> Saweria</a></li>
+                        <li><a href="#"><i class="fas fa-hamburger" style="color: #fbbf24; margin-right: 5px;"></i> Trakteer</a></li>
+                        <li><a href="#"><i class="fab fa-paypal" style="color: #60a5fa; margin-right: 5px;"></i> PayPal</a></li>
+                    </ul>
+                </div>
+
                 <div>
                     <h4 class="footer-title">Social</h4>
                     <div class="social-row">
-                        <a href="#" style="--icon-color: #fff"><i class="fab fa-github"></i></a>
-                        <a href="#" style="--icon-color: #3b82f6"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" style="--icon-color: #f56565"><i class="fab fa-youtube"></i></a>
-                        <a href="#" style="--icon-color: #E91E63"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/muharsyad" style="--icon-color: #fff" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/muharsyad/" style="--icon-color: #3b82f6" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/@muhacode" style="--icon-color: #f56565" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/muhacode" style="--icon-color: #E91E63" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>

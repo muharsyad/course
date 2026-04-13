@@ -55,6 +55,7 @@ ul {
     display: none !important;
 }
 
+/* --- BUTTONS --- */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -77,70 +78,31 @@ ul {
 .btn-link-animated {
     position: relative;
     display: inline-block;
-    color: var(--brand-primary); /* Gunakan warna hijau/cyan Anda */
+    color: var(--brand-primary);
     text-decoration: none;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.875rem;
-    padding-bottom: 4px; /* Ruang untuk garis */
+    padding-bottom: 4px;
     transition: color 0.3s ease;
 }
 
-/* Membuat garis dasar */
 .btn-link-animated::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0; /* Mulai dari lebar nol */
-    height: 2px; /* Tebal garis */
+    width: 0;
+    height: 2px;
     background-color: var(--brand-primary);
-    /* Transisi dari kiri ke kanan */
     transition: width 0.3s ease-out;
 }
 
-/* Animasi saat hover */
 .btn-link-animated:hover::after {
-    width: 100%; /* Lebar penuh saat kursor di atasnya */
+    width: 100%;
 }
 
-/* Opsional: Efek sedikit terang saat hover */
 .btn-link-animated:hover {
     filter: brightness(1.2);
-}
-
-/* --- BACKGROUND ANIMATIONS --- */
-.math-bg-container {
-    position: fixed;
-    inset: 0;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.math-symbol {
-    position: absolute;
-    opacity: 0.05;
-    font-family: "JetBrains Mono", monospace;
-    font-weight: bold;
-}
-
-@keyframes float {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-.animate-float {
-    animation: float 6s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-    animation: float 6s ease-in-out 3s infinite;
 }
 
 /* --- NAVBAR --- */
@@ -173,11 +135,7 @@ nav.scrolled {
     letter-spacing: -1px;
 }
 
-.nav-links {
-    display: none;
-}
-
-.desktop-only {
+.nav-links, .desktop-only {
     display: none;
 }
 
@@ -267,7 +225,7 @@ header p {
     position: sticky;
     top: 80px;
     z-index: 90;
-    background: rgba(15, 23, 42, 0.95);
+    background: var(--glass-bg);
     backdrop-filter: blur(8px);
     padding: 1rem 0;
     border-bottom: 1px solid var(--border-color);
@@ -293,14 +251,11 @@ header p {
     overflow-x: auto;
     padding-bottom: 0.5rem;
     scrollbar-width: none;
-    /* Firefox */
 }
 
 .filter-group::-webkit-scrollbar {
     display: none;
 }
-
-/* Chrome/Safari */
 
 .filter-btn {
     padding: 0.4rem 1.25rem;
@@ -361,11 +316,12 @@ header p {
     font-size: 0.875rem;
 }
 
-/* --- COURSE GRID --- */
+/* --- MAIN & COURSE GRID --- */
 main {
     padding: 3rem 0;
     flex-grow: 1;
-    z-index: 100;
+    position: relative;
+    z-index: 1;
 }
 
 .course-grid {
@@ -375,20 +331,16 @@ main {
 }
 
 @media (min-width: 768px) {
-    .course-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .course-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (min-width: 1024px) {
-    .course-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    .course-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* --- COURSE CARD --- */
 .course-card {
-    background: var(--brand-card);
+    background-color: var(--brand-card);
     border-radius: 12px;
     border: 1px solid var(--border-color);
     display: flex;
@@ -399,56 +351,7 @@ main {
 
 .course-card:hover {
     transform: translateY(-4px);
-}
-
-/* Custom Hover Colors by Category */
-/* --- COURSE GRID --- */
-main {
-    padding: 3rem 0;
-    flex-grow: 1;
-    position: relative;
-    z-index: 1; /* Di atas background symbols */
-}
-
-.course-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-}
-
-@media (min-width: 768px) {
-    .course-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .course-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* --- COURSE CARD (Opaque Version) --- */
-.course-card {
-    background-color: var(--brand-card);
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid var(--border-color);
-    transition: all o.3s ease;
-}
-
-.course-card:hover {
     border-color: var(--card-color);
-}
-
-.card-header {
-    height: 160px;
-    background-color: var(--brand-header); /* Warna Solid (Tidak Transparan) */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
 }
 
 .course-thumb {
@@ -473,19 +376,11 @@ main {
     color: var(--card-color);
 }
 
-.badge-free {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: var(--brand-primary);
-    color: var(--brand-dark);
-    font-size: 0.7rem;
-    font-weight: bold;
-    padding: 4px 8px;
-    border-radius: 4px;
+.course-card:hover h3 {
+    color: var(--card-color);
 }
 
-.badge-premium {
+.badge-free, .badge-premium {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -517,20 +412,14 @@ main {
     font-weight: 600;
 }
 
-.tag-blue {
-    background: rgba(96, 165, 250, 0.1);
-    color: #60a5fa;
-}
-
-.tag-amber {
-    background: rgba(251, 191, 36, 0.1);
-    color: var(--brand-secondary);
-}
+.tag-blue { background: rgba(96, 165, 250, 0.1); color: #60a5fa; }
+.tag-amber { background: rgba(251, 191, 36, 0.1); color: var(--brand-secondary); }
 
 .course-body h3 {
     font-size: 1.125rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    transition: var(--transition);
 }
 
 .course-body p {
@@ -561,8 +450,6 @@ main {
     color: var(--brand-primary);
 }
 
-
-
 /* --- EMPTY STATE --- */
 #noResults {
     text-align: center;
@@ -592,9 +479,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 2fr 1fr 1fr;
-    }
+    .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
 }
 
 .footer-logo {
@@ -620,13 +505,13 @@ footer {
 }
 
 .footer-links li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     font-size: 0.875rem;
     color: var(--text-gray);
 }
 
 .footer-links a:hover {
-    color: var(--text-white);
+    color: var(--brand-primary);
 }
 
 .social-row {
@@ -637,10 +522,12 @@ footer {
 .social-row a {
     font-size: 1.25rem;
     color: var(--text-gray);
+    transition: var(--transition);
 }
 
 .social-row a:hover {
     color: var(--icon-color);
+    transform: translateY(-2px);
 }
 
 .footer-bottom {
@@ -653,13 +540,10 @@ footer {
 }
 
 @media (min-width: 768px) {
-    .footer-bottom {
-        flex-direction: row;
-    }
+    .footer-bottom { flex-direction: row; }
 }
 
 .footer-bottom p {
     font-size: 0.75rem;
     color: #4b5563;
 }
-
