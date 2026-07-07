@@ -1,13 +1,22 @@
 /* --- CSS VARIABLES --- */
 :root {
-    --brand-dark: #0f172a;
-    --brand-card: #1e293b;
-    --brand-primary: #2dd4bf;
-    --brand-secondary: #fbbf24;
-    --text-white: #f8fafc;
-    --text-gray: #94a3b8;
-    --border-color: rgba(255, 255, 255, 0.08);
-    --glass-bg: rgba(15, 23, 42, 0.85);
+    --light-background-primary: #FAF7F2;
+    --light-background-secondary: #F4EDE4;
+    --light-text-primary: #3D3833;
+    --light-text-secondary: #8A8178;
+    --light-accent-primary: #D68C7A;
+    --light-accent-secondary: #E5C392;
+    --light-sage-green: #A3B19B;
+    --light-dusty-blue: #96A9B5;
+    --light-muted-mauve: #B599A4;
+    --light-warm-mustard: #D4AA63;
+    --light-dusty-rose: #C79A9A;
+    --light-muted-teal: #7A9E9F;
+    --light-warm-olive: #A5A57A;
+    --light-slate-violet: #9390AD;
+    --light-burnt-clay: #B88972;
+    --transition: all 0.3s ease;
+    --glass-bg: color-mix(in srgb, var(--light-background-primary) 80%, transparent);
     --transition: all 0.3s ease;
 }
 
@@ -23,8 +32,8 @@ html {
 }
 
 body {
-    background-color: var(--brand-dark);
-    color: var(--text-white);
+    background-color: var(--light-background-primary);
+    color: var(--light-text-primary);
     font-family: "Inter", sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
@@ -66,19 +75,19 @@ ul {
 }
 
 .btn-primary {
-    background-color: var(--brand-primary);
-    color: var(--brand-dark);
+    background-color: var(--light-accent-primary);
+    color: var(--light-background-primary);
 }
 
 .btn-primary:hover {
-    background-color: white;
+    background-color: var(--light-accent-secondary);
     transform: translateY(-2px);
 }
 
 .btn-link-animated {
     position: relative;
     display: inline-block;
-    color: var(--brand-primary);
+    color: var(--light-accent-primary);
     text-decoration: none;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.875rem;
@@ -93,7 +102,7 @@ ul {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--brand-primary);
+    background-color: var(--light-accent-primary);
     transition: width 0.3s ease-out;
 }
 
@@ -112,14 +121,14 @@ nav {
     width: 100%;
     height: 80px;
     z-index: 100;
-    background-color: var(--brand-dark);
-    border-bottom: 1px solid var(--border-color);
+    background-color: var(--light-background-primary);
+    border-bottom: 1px solid var(--light-accent-secondary);
     display: flex;
     align-items: center;
 }
 
 nav.scrolled {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 15px -3px color-mix(in srgb, var(--light-accent-primary) 20%, transparent);
 }
 
 .nav-content {
@@ -129,10 +138,21 @@ nav.scrolled {
     width: 100%;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: -1px;
+nav.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.logo a:hover .logo-img {
+    opacity: 0.8;
+    transition: opacity 0.3 ease;
 }
 
 .nav-links, .desktop-only {
@@ -155,14 +175,14 @@ nav.scrolled {
 }
 
 .nav-links a:hover {
-    color: var(--brand-primary);
+    color: var(--light-accent-primary);
 }
 
 .mobile-menu-btn {
     display: block;
     background: none;
     border: none;
-    color: var(--text-gray);
+    color: var(--light-text-secondary);
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -179,8 +199,8 @@ nav.scrolled {
     top: 80px;
     left: 0;
     width: 100%;
-    background-color: var(--brand-card);
-    border-bottom: 1px solid var(--border-color);
+    background-color: var(--light-background-primary);
+    border-bottom: 1px solid var(--light-accent-secondary);
     padding: 1rem;
     display: none;
 }
@@ -214,7 +234,7 @@ header h1 {
 }
 
 header p {
-    color: var(--text-gray);
+    color: var(--light-text-secondary);
     max-width: 600px;
     margin: 0 auto;
     font-size: 1.125rem;
@@ -228,7 +248,7 @@ header p {
     background: var(--glass-bg);
     backdrop-filter: blur(8px);
     padding: 1rem 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--light-accent-secondary);
 }
 
 .filter-container {
@@ -260,9 +280,9 @@ header p {
 .filter-btn {
     padding: 0.4rem 1.25rem;
     border-radius: 999px;
-    border: 1px solid #334155;
+    border: 1px solid var(--light-accent-secondary);
     background: transparent;
-    color: var(--text-gray);
+    color: var(--light-text-secondary);
     font-size: 0.875rem;
     white-space: nowrap;
     cursor: pointer;
@@ -270,13 +290,13 @@ header p {
 }
 
 .filter-btn:hover {
-    border-color: var(--brand-primary);
+    border-color: var(--light-accent-primary);
 }
 
 .filter-btn.active {
-    background: var(--brand-primary);
-    color: var(--brand-dark);
-    border-color: var(--brand-primary);
+    background: var(--light-accent-primary);
+    color: var(--light-background-primary);
+    border-color: var(--light-accent-primary);
     font-weight: 700;
 }
 
@@ -293,18 +313,18 @@ header p {
 
 .search-wrapper input {
     width: 100%;
-    background: var(--brand-card);
-    border: 1px solid #334155;
+    background: var(--light-background-secondary);
+    border: 1px solid var(--light-accent-secondary);
     border-radius: 8px;
     padding: 0.6rem 1rem 0.6rem 2.5rem;
-    color: white;
+    color: var(--light-text-secondary);
     font-size: 0.875rem;
     outline: none;
 }
 
 .search-wrapper input:focus {
-    border-color: var(--brand-primary);
-    box-shadow: 0 0 0 1px var(--brand-primary);
+    border-color: var(--light-accent-primary);
+    box-shadow: 0 0 0 1px var(--light-accent-primary);
 }
 
 .search-wrapper i {
@@ -312,7 +332,7 @@ header p {
     left: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    color: #64748b;
+    color: var(--light-text-primary);
     font-size: 0.875rem;
 }
 
@@ -340,9 +360,9 @@ main {
 
 /* --- COURSE CARD --- */
 .course-card {
-    background-color: var(--brand-card);
+    background-color: var(--light-background-secondary);
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--light-accent-secondary);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -356,7 +376,7 @@ main {
 
 .course-thumb {
     height: 192px;
-    background: linear-gradient(135deg, #1e293b, #0f172a);
+    background: linear-gradient(135deg, #EBD0A8, #F5F1E8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -366,7 +386,7 @@ main {
 .course-thumb i,
 .course-thumb span {
     font-size: 3.75rem;
-    color: #475569;
+    color: var(--light-background-primary);
     transition: var(--transition);
 }
 
@@ -384,8 +404,8 @@ main {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: var(--brand-primary);
-    color: var(--brand-dark);
+    background: var(--light-accent-primary);
+    color: var(--light-background-primary);
     font-size: 0.7rem;
     font-weight: bold;
     padding: 4px 8px;
@@ -412,10 +432,50 @@ main {
     font-weight: 600;
 }
 
-.tag-blue { background: rgba(96, 165, 250, 0.1); color: #60a5fa; }
-.tag-amber { background: rgba(251, 191, 36, 0.1); color: var(--brand-secondary); }
-.tag-red { background: rgba(239, 68, 68, 0.15); color: #f87171;} 
-.tag-greed { background-color: rgba(16, 185, 129, 0.15); color: #34d399;}
+.tag-sage-green {
+    background: color-mix(in srgb, var(--light-sage-green) 15%, transparent);
+    color: var(--light-sage-green);
+}
+
+.tag-dusty-blue {
+    background: color-mix(in srgb, var(--light-dusty-blue) 15%, transparent);
+    color: var(--light-dusty-blue);
+}
+
+.tag-muted-mauve {
+    background: color-mix(in srgb, var(--light-muted-mauve) 15%, transparent);
+    color: var(--light-muted-mauve);
+}
+
+.tag-warm-mustard {
+    background: color-mix(in srgb, var(--light-warm-mustard) 15%, transparent);
+    color: var(--light-warm-mustard);
+}
+
+.tag-dusty-rose {
+    background: color-mix(in srgb, var(--light-dusty-rose) 15%, transparent);
+    color: var(--light-dusty-rose);
+}
+
+.tag-muted-teal{
+    background: color-mix(in srgb, var(--light-muted-teal) 15%, transparent);
+    color: var(--light-muted-teal);
+}
+
+.tag-warm-olive {
+    background: color-mix(in srgb, var(--light-warm-olive) 15%, transparent);
+    color: var(--light-warm-olive);
+}
+
+.tag-slate-violet {
+    background: color-mix(in srgb, var(--light-slate-violet) 15%, transparent);
+    color: var(--light-slate-violet);
+}
+
+.tag-burnt-clay {
+    background: color-mix(in srgb, var(--light-burnt-clay) 15%, transparent);
+    color: var(--light-burnt-clay);
+}
 
 .course-body h3 {
     font-size: 1.125rem;
@@ -426,13 +486,13 @@ main {
 
 .course-body p {
     font-size: 0.875rem;
-    color: var(--text-gray);
+    color: var(--light-text-secondary);
     margin-bottom: 1.5rem;
     flex-grow: 1;
 }
 
 .card-footer {
-    border-top: 1px solid #334155;
+    border-top: 1px solid var(--light-accent-secondary);
     padding-top: 1rem;
     display: flex;
     justify-content: space-between;
@@ -441,15 +501,15 @@ main {
 
 .meta-info {
     font-size: 0.8rem;
-    color: #475569;
+    color: var(--light-text-secondary);
 }
 
 .course-card a {
-    color: var(--text-white);
+    color: var(--light-text-primary);
 }
 
 .course-card a.btn-link-animated:hover {
-    color: var(--brand-primary);
+    color: var(--light-accent-primary);
 }
 
 /* --- EMPTY STATE --- */
@@ -461,13 +521,13 @@ main {
 
 #noResults i {
     font-size: 2.5rem;
-    color: #334155;
+    color: var(--light-accent-primary);
     margin-bottom: 1rem;
 }
 
 /* --- FOOTER --- */
 footer {
-    background-color: #080808;
+    background-color: var(--light-background-secondary);
     padding: 50px 0 40px;
     position: relative;
     z-index: 2;
@@ -485,20 +545,25 @@ footer {
 }
 
 .footer-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
     margin-bottom: 1rem;
+    display: inline-block; /* Diubah menjadi inline-block agar pas membungkus gambar */
+}
+
+/* Tambahkan style baru untuk mengatur ukuran gambar logo */
+.footer-logo img {
+    height: 80px; /* Sesuaikan nilai ini agar pas dengan desainmu (misal: 30px, 40px, atau 50px) */
+    width: auto;  /* Menjaga proporsi logo agar tidak gepeng */
     display: block;
 }
 
 .footer-text {
-    color: var(--text-gray);
+    color: var(--light-text-secondary);
     font-size: 0.875rem;
     max-width: 350px;
 }
 
 .footer-title {
-    color: white;
+    color: var(--light-text-primary);
     font-size: 0.75rem;
     text-transform: uppercase;
     font-weight: bold;
@@ -509,11 +574,11 @@ footer {
 .footer-links li {
     margin-bottom: 0.75rem;
     font-size: 0.875rem;
-    color: var(--text-gray);
+    color: var(--light-text-secondary);
 }
 
 .footer-links a:hover {
-    color: var(--brand-primary);
+    color: var(--light-accent-primary);
 }
 
 .social-row {
@@ -523,7 +588,7 @@ footer {
 
 .social-row a {
     font-size: 1.25rem;
-    color: var(--text-gray);
+    color: var(--light-text-secondary);
     transition: var(--transition);
 }
 
@@ -534,7 +599,7 @@ footer {
 
 .footer-bottom {
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--light-accent-secondary);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -547,5 +612,5 @@ footer {
 
 .footer-bottom p {
     font-size: 0.75rem;
-    color: #4b5563;
+    color: var(--light-text-secondary);
 }

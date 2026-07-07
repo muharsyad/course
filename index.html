@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Library - Muhacode</title>
-    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 
@@ -18,8 +18,8 @@
     <nav id="navbar">
         <div class="container nav-content">
             <div class="logo font-mono">
-                <a href="#">
-                    <span style="color: var(--brand-primary)">&lt;</span>Muha<span style="color: white">Code</span><span style="color: var(--brand-primary)">/&gt;</span>
+                <a href="https://muhacode.com">
+                    <img src="assets/nav-logo.png" alt="MuhaCode Logo" class="logo-img">
                 </a>
             </div>
 
@@ -52,13 +52,13 @@
             <a href="../blog/" onclick="toggleMenu()">Blog</a>
             <a href="../resource/" onclick="toggleMenu()">Resource</a>
             <a href="../donate/" onclick="toggleMenu()" style="display: none;">Donasi</a>
-            <a href="../profile/" onclick="toggleMenu()" style="color: var(--brand-primary); font-weight: bold;">Tentang Saya</a>
+            <a href="../profile/" onclick="toggleMenu()" style="color: var(--light-sage-green); font-weight: bold;">Tentang Saya</a>
         </div>
     </nav>
 
     <header>
         <div class="container">
-            <h1>Kurikulum <span style="color: var(--brand-primary)">Komprehensif</span></h1>
+            <h1>Kurikulum <span style="color: var(--light-accent-primary)">Komprehensif</span></h1>
             <p>Pilih jalur belajarmu. Dari fundamental matematika hingga implementasi AI modern.</p>
         </div>
     </header>
@@ -85,15 +85,56 @@
     <main>
         <div class="container">
             <div id="courseGrid" class="course-grid">
-                <div class="course-card" data-category="math" style="--card-color: var(--brand-primary);">
+
+                <div class="course-card" data-category="math" style="--card-color: var(--light-sage-green);">
+                    <div class="course-thumb">
+                        <span class="symbol font-mono">A x = b</span>
+                        <div class="badge-free">FREE</div>
+                    </div>
+                    <div class="course-body">
+                        <div class="tag-row">
+                            <span class="tag tag-sage-green font-mono">Math</span>
+                            <span class="tag tag-slate-violet font-mono">Hard</span>
+                        </div>
+                        <h3>Aljabar Linear Elementer</h3>
+                        <p>Pahami vektor, matriks, eigen-value, dan dekomposisi yang menjadi jantung Neural Network.</p>
+                        <div class="card-footer">
+                            <div class="meta-info"><i class="far fa-clock"></i> 15 Jam</div>
+                            <a href="../course/aljabar-linier-elementer" class="btn-link-animated"
+                                style="font-size: 0.875rem; font-family: 'JetBrains Mono';">Mulai Belajar <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card" data-category="math" style="--card-color: var(--light-dusty-rose);">
                     <div class="course-thumb">
                         <i class="fas fa-square-root-variable"></i>
                         <div class="badge-premium">FREE</div>
                     </div>
                     <div class="course-body">
                         <div class="tag-row">
-                            <span class="tag tag-amber font-mono">Math</span>
-                            <span class="tag tag-red font-mono">Olimpiade</span>
+                            <span class="tag tag-burnt-clay font-mono">Math</span>
+                            <span class="tag tag-dusty-rose font-mono">Olimpiade</span>
+                        </div>
+                        <h3>Olimpiade Matematika SMA</h3>
+                        <p>Panduan taktis menaklukkan Olimpiade Matematika SMA melalui pemahaman logika dan konsep yang matang.</p>
+                        <div class="card-footer">
+                            <div class="meta-info"><i class="far fa-clock"></i> 40+ Jam</div>
+                            <a href="../course/osn-matematika-sma" class="btn-link-animated">Detail &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="math" style="--card-color: var(--light-sage-green);">
+                    <div class="course-thumb">
+                        <i class="fas fa-square-root-variable"></i>
+                        <div class="badge-premium">FREE</div>
+                    </div>
+                    <div class="course-body">
+                        <div class="tag-row">
+                            <span class="tag tag-dusty-blue font-mono">Math</span>
+                            <span class="tag tag-dusty-rose font-mono">Olimpiade</span>
                         </div>
                         <h3>Pembahasan OSN Matematika SMA (2002-2023)</h3>
                         <p>Solusi langkah demi langkah soal OSN Matematika untuk membangun pemahaman konsep yang mendalam.</p>
@@ -104,15 +145,15 @@
                     </div>
                 </div>
 
-                <div class="course-card" data-category="math" style="--card-color: var(--brand-primary);">
+                <div class="course-card" data-category="math" style="--card-color: var(--light-sage-green);">
                     <div class="course-thumb">
                         <i class="fas fa-square-root-variable"></i>
                         <div class="badge-premium">FREE</div>
                     </div>
                     <div class="course-body">
                         <div class="tag-row">
-                            <span class="tag tag-amber font-mono">Math</span>
-                            <span class="tag tag-red font-mono">Olimpiade</span>
+                            <span class="tag tag-dusty-blue font-mono">Math</span>
+                            <span class="tag tag-dusty-rose font-mono">Olimpiade</span>
                         </div>
                         <h3>Pembahasan OSK Matematika SMA (2002-2025)</h3>
                         <p>Solusi langkah demi langkah soal OSK Matematika untuk membangun pemahaman konsep yang mendalam.</p>
@@ -123,15 +164,15 @@
                     </div>
                 </div>
 
-                <div class="course-card" data-category="math" style="--card-color: var(--brand-primary);">
+                <div class="course-card" data-category="math" style="--card-color: var(--light-sage-green);">
                     <div class="course-thumb">
                         <i class="fas fa-square-root-variable"></i>
                         <div class="badge-premium">FREE</div>
                     </div>
                     <div class="course-body">
                         <div class="tag-row">
-                            <span class="tag tag-amber font-mono">Math</span>
-                            <span class="tag tag-red font-mono">Olimpiade</span>
+                            <span class="tag tag-dusty-blue font-mono">Math</span>
+                            <span class="tag tag-dusty-rose font-mono">Olimpiade</span>
                         </div>
                         <h3>Pembahasan OSP Matematika SMA (2002-2025)</h3>
                         <p>Solusi langkah demi langkah soal OSP Matematika untuk membangun pemahaman konsep yang mendalam.</p>
@@ -142,15 +183,15 @@
                     </div>
                 </div>
 
-                <div class="course-card" data-category="python" style="--card-color: #60A5FA;">
+                <div class="course-card" data-category="python" style="--card-color: var(--light-dusty-blue);">
                     <div class="course-thumb">
                         <i class="fab fa-python"></i>
                         <div class="badge-free">FREE</div>
                     </div>
                     <div class="course-body">
                         <div class="tag-row">
-                            <span class="tag tag-blue font-mono">Python</span>
-                            <span class="tag tag-amber font-mono">Fundamental</span>
+                            <span class="tag tag-sage-green font-mono">Python</span>
+                            <span class="tag tag-dusty-blue font-mono">Fundamental</span>
                         </div>
                         <h3>Python from Scratch</h3>
                         <p>Panduan lengkap Python. Dari variabel, loop, hingga konsep Object Oriented Programming (OOP).</p>
@@ -161,15 +202,15 @@
                     </div>
                 </div>
 
-                <div class="course-card" data-category="data" style="--card-color: #34d399;">
+                <div class="course-card" data-category="data" style="--card-color: var(--light-sage-green);">
                     <div class="course-thumb">
                         <i class="fas fa-database"></i>
                         <div class="badge-premium">PREMIUM</div>
                     </div>
                     <div class="course-body">
                         <div class="tag-row">
-                            <span class="tag tag-blue font-mono">Data</span>
-                            <span class="tag tag-amber font-mono">Intemediate</span>
+                            <span class="tag tag-sage-green font-mono">Data</span>
+                            <span class="tag tag-dusty-blue font-mono">Intemediate</span>
                         </div>
                         <h3>Mastering Pandas & SQL</h3>
                         <p>Teknik wrangling data tingkat lanjut. Gabungkan kekuatan Python Pandas dan SQL Query.</p>
@@ -180,15 +221,15 @@
                     </div>
                 </div>
 
-                <div class="course-card" data-category="math" style="--card-color: #fb923c;">
+                <div class="course-card" data-category="math" style="--card-color: var(--light-dusty-rose);">
                     <div class="course-thumb">
                         <span class="symbol font-mono">A x = b</span>
                         <div class="badge-premium">PREMIUM</div>
                     </div>
                     <div class="course-body">
                         <div class="tag-row">
-                            <span class="tag tag-blue font-mono">Math</span>
-                            <span class="tag tag-amber font-mono">Hard</span>
+                            <span class="tag tag-sage-green font-mono">Math</span>
+                            <span class="tag tag-dusty-blue font-mono">Hard</span>
                         </div>
                         <h3>Aljabar Linear untuk ML</h3>
                         <p>Pahami vektor, matriks, eigen-value, dan dekomposisi yang menjadi jantung Neural Network.</p>
@@ -199,15 +240,15 @@
                     </div>
                 </div>
 
-                <div class="course-card" data-category="ai" style="--card-color: var(--brand-primary);">
+                <div class="course-card" data-category="ai" style="--card-color: var(--light-sage-green);">
                     <div class="course-thumb">
                         <i class="fas fa-brain"></i>
                         <div class="badge-premium">PREMIUM</div>
                     </div>
                     <div class="course-body">
                         <div class="tag-row">
-                            <span class="tag tag-blue font-mono">AI</span>
-                            <span class="tag tag-amber font-mono">Advanced</span>
+                            <span class="tag tag-sage-green font-mono">AI</span>
+                            <span class="tag tag-dusty-blue font-mono">Advanced</span>
                         </div>
                         <h3>Intro to Deep Learning</h3>
                         <p>Membangun Neural Network pertama Anda menggunakan PyTorch. Studi kasus: Computer Vision.</p>
@@ -218,15 +259,15 @@
                     </div>
                 </div>
 
-                <div class="course-card" data-category="math" style="--card-color: #fb923c;">
+                <div class="course-card" data-category="math" style="--card-color: var(--light-dusty-rose);">
                     <div class="course-thumb">
                         <i class="fas fa-chart-line"></i>
                         <div class="badge-premium">PREMIUM</div>
                     </div>
                     <div class="course-body">
                         <div class="tag-row">
-                            <span class="tag tag-blue font-mono">Viz</span>
-                            <span class="tag tag-amber font-mono">Intermediate</span>
+                            <span class="tag tag-sage-green font-mono">Viz</span>
+                            <span class="tag tag-dusty-blue font-mono">Intermediate</span>
                         </div>
                         <h3>Data Storytelling</h3>
                         <p>Bukan sekadar grafik. Pelajari cara mengomunikasikan insight data kepada stakeholder.</p>
@@ -249,8 +290,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <a href="#" class="footer-logo font-mono">
-                        &lt;MuhaCode/&gt;
+                    <a href="#" class="footer-logo">
+                        <img src="assets/nav-logo.png" alt="MuhaCode Logo">
                     </a>
                     <p class="footer-text">Membangun pemahaman teknologi melalui fondasi matematika yang kuat. Belajar coding bukan sekadar menghafal sintaks, tapi memahami logika.</p>
                 </div>

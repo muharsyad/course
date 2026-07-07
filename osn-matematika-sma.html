@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olimpiade Matematika SMA - Muhacode</title>
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles/course-detail.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="container nav-content">
+            <div class="logo font-mono">
+                <a href="https://muhacode.com">
+                    <span style="color: var(--brand-primary)">&lt;</span>Muha<span style="color: white">Code</span><span
+                        style="color: var(--brand-primary)">/&gt;</span>
+                </a>
+            </div>
+
+            <ul class="nav-links font-mono">
+                <li><a href="https://muhacode.com">Home</a></li>
+                <li><a href="../roadmap">Roadmap</a></li>
+                <li><a href="../portfolio">Portofolio</a></li>
+                <li><a href="../service">Layanan</a></li>
+                <li><a href="../blog">Blog</a></li>
+                <li><a href="../resource">Resource</a></li>
+                <li style="display: none;"><a href="../donate">Donasi</a></li>
+            </ul>
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <div class="desktop-only">
+                    <a href="../profile" class="btn btn-primary"
+                        style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Tentang Saya</a>
+                </div>
+
+                <button class="mobile-menu-btn" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu-panel font-mono" id="mobile-menu">
+            <a href="https://muhacode.com">Home</a>
+            <a href="../roadmap" onclick="toggleMenu()">Roadmap</a>
+            <a href="../portfolio" onclick="toggleMenu()">Portofolio</a>
+            <a href="../service" onclick="toggleMenu()">Layanan</a>
+            <a href="../blog" onclick="toggleMenu()">Blog</a>
+            <a href="../resource" onclick="toggleMenu()">Resource</a>
+            <a href="../donate" onclick="toggleMenu()" style="display: none;">Donasi</a>
+            <a href="../profile" onclick="toggleMenu()" style="color: var(--brand-primary); font-weight: bold;">Tentang
+                Saya</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Breadcrumb dipindah ke dalam sini agar dijamin rata kiri sejajar) -->
+    <header class="course-hero">
+        <div class="container-narrow">
+            
+            <!-- BREADCRUMB -->
+            <div class="breadcrumb font-mono">
+                <a href="../course">Course</a>
+                <span>/</span>
+                <span class="active">Olimpiade Matematika SMA</span>
+            </div>
+
+            <div class="badges">
+                <span class="badge free">100% GRATIS</span>
+                <span class="badge jupyter"><i class="fas fa-book-open"></i> JUPYTER BOOK</span>
+                <span class="badge math">Math</span>
+                <span class="badge advanced">Olimpiade</span>
+            </div>
+            
+            <h1 class="course-title">Buku Interaktif: Olimpiade Matematika SMA</h1>
+            <p class="course-desc">
+                Panduan taktis menaklukkan Olimpiade Matematika SMA melalui pemahaman logika dan konsep yang matang. Kuasai strategi pemecahan masalah yang terstruktur melalui buku digital interaktif yang bersih, nyaman dipelajari, dan sepenuhnya gratis.
+            </p>
+
+            <div class="course-meta">
+                <div class="instructor">
+                    <div class="instructor-img"><i class="fas fa-pen-nib text-gray-500"></i></div>
+                    <span class="instructor-name">Ditulis oleh Muha Code</span>
+                </div>
+                <div class="meta-item hidden">
+                    <i class="fas fa-book-reader"></i>
+                    <span>150+ Halaman Interaktif</span>
+                </div>
+                <div class="meta-item hidden">
+                    <i class="fas fa-users"></i>
+                    <span>Telah dibaca 850+ Siswa</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN LAYOUT -->
+    <main class="container-narrow course-layout">
+        
+        <!-- LEFT COLUMN: CONTENT -->
+        <div class="course-content">
+            
+            <!-- Deskripsi Singkat -->
+            <section class="content-section prose">
+                <h2 class="section-title">Tentang Buku Ini</h2>
+                <p>
+                    Menghadapi Olimpiade Sains Nasional (OSN) Matematika tingkat SMA membutuhkan lebih dari sekadar penguasaan materi yang diajarkan di kelas reguler. Kompetisi ini menuntut pergeseran pola pikir; dari sekadar menghitung atau menghafal rumus, menjadi kemampuan menganalisis masalah secara mendalam. Oleh karena itu, course ini dirancang khusus untuk membangun fondasi logika yang kokoh dan pemahaman konsep matematika tingkat lanjut yang benar-benar matang. Kami meyakini bahwa setiap soal olimpiade adalah murni tantangan logika yang menuntut penalaran sistematis, sehingga pendekatan belajarnya pun dijauhkan dari hafalan buta apalagi cara-cara instan.
+                </p>
+                <p>
+                    Mengacu pada silabus resmi olimpiade, materi di dalam course ini membedah secara tuntas empat pilar utama penyelesaian masalah analitis: Aljabar, Geometri, Kombinatorik, dan Teori Bilangan. Setiap topik diuraikan tahap demi tahap—mulai dari akar konsep dasar, pembuktian teorema dan sifat-sifat matematis, hingga strategi problem solving tingkat tinggi. Dengan alur pembelajaran yang terstruktur ini, siswa tidak hanya dilatih untuk menemukan jawaban yang tepat pada suatu soal, tetapi juga dididik untuk memiliki kerangka berpikir kritis yang akan menjadi bekal utama mereka dalam menaklukkan berbagai variasi kasus di medan kompetisi.
+                </p>
+            </section>
+
+            <!-- What You Will Learn -->
+            <section class="content-section">
+                <h2 class="section-title">Topik yang dibahas</h2>
+                <div class="learning-box">
+                    <div class="learning-grid">
+                        <div class="learning-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p><strong>Aljabar:</strong> Strategi manipulasi aljabar dalam ketaksamaan, analisis barisan bilangan, serta pemahaman komprehensif pada akar polinom dan sifat-sifat fungsi..</p>
+                        </div>
+                        <div class="learning-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p><strong>Kombinatorik:</strong> Penalaran terstruktur dalam teknik pencacahan, eksplorasi identitas koefisien binom, serta penerapan teori peluang dan himpunan pada kasus kompleks.</p>
+                        </div>
+                        <div class="learning-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p><strong>Geometri:</strong> Pendekatan analitis untuk menyelesaikan persoalan <i>angle chasing</i> pembuktian garis istimewa segitiga, dan eksplorasi mendalam pada konsep lingkaran.</p>
+                        </div>
+                        <div class="learning-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p><strong>Teori Bilangan:</strong> Analisi mendalam mengenai keterbagian, pemahaman struktur kongruensi modulo, serta penyelesaian persamaan Diophantine sederhana dengan pendekatan logis.</p>
+                        </div>
+                        <div class="learning-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p><strong>Pemahaman Konsep & Logika:</strong> Fokus pada alur berpikir terstruktur untuk membangun fondasi penalaran yang kuat, sehingga kamu bisa menemukan solusi logis dan akurat tanpa bergantung pada hafalan.</p>
+                        </div>
+                        <div class="learning-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p><strong>Pembelajaran Terstruktur:</strong> Materi disusun secara runut dari pengenalan sifat dasar hingga tingkat lanjut, membimbingmu memecahkan masalah (<i>problem solving</i>) tahap demi tahap dengan pemahaman yang matang.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Curriculum Accordion -->
+            <section class="content-section">
+                <h2 class="section-title">Daftar Isi (Table of Contents)</h2>
+                <div class="curriculum-list">
+                    
+                    <!-- Module 1 -->
+                    <div class="module-item">
+                        <div class="module-header" onclick="toggleModule(this)">
+                            <div class="module-title-wrapper">
+                                <span class="module-title">Modul 1: Aljabar</span>
+                                <span class="module-meta">4 Bab & Kumpulan Soal Latihan</span>
+                            </div>
+                            <i class="fas fa-chevron-down module-icon"></i>
+                        </div>
+                        <div class="module-content">
+                            <ul class="lesson-list">
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>Pengantar dan Ketaksamaan</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>Barisan Bilangan</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>Polinomial (Suku Banyak)</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>Fungsi dan Persamaan Fungsi</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>Uji Kompetensi</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Module 2 -->
+                    <div class="module-item">
+                        <div class="module-header" onclick="toggleModule(this)">
+                            <div class="module-title-wrapper">
+                                <span class="module-title">Modul 2: Geometri</span>
+                                <span class="module-meta">3 Bab & Kumpulan Soal Latihan</span>
+                            </div>
+                            <i class="fas fa-chevron-down module-icon"></i>
+                        </div>
+                        <div class="module-content">
+                            <ul class="lesson-list">
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>Sudut dan Segiempat Tali Busur</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>Anotomi Segitiga Lanjutan</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>Teorema Lingkaran</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-lock"></i>
+                                        <span>Uji Kompetensi</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Module 3 -->
+                    <div class="module-item">
+                        <div class="module-header" onclick="toggleModule(this)">
+                            <div class="module-title-wrapper">
+                                <span class="module-title">Modul 3: Kombinatorik</span>
+                                <span class="module-meta">4 Bab & Kumpulan Soal Latihan</span>
+                            </div>
+                            <i class="fas fa-chevron-down module-icon"></i>
+                        </div>
+                        <div class="module-content">
+                            <ul class="lesson-list">
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>Basic Counting</span>
+                                    </div>
+                                    <span class="lesson-status status-ready hidden">Tersedia</span>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-lock"></i>
+                                        <span>Ekspansi Binomial dan Multinomial</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-lock"></i>
+                                        <span>Teori Peluang</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-lock"></i>
+                                        <span>Teori Himpuanan</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-lock"></i>
+                                        <span>Uji Kompetensi</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Module 4 -->
+                    <div class="module-item">
+                        <div class="module-header" onclick="toggleModule(this)">
+                            <div class="module-title-wrapper">
+                                <span class="module-title">Modul 4: Teori Bilangan</span>
+                                <span class="module-meta">4 Bab & Kumpulan Soal Latihan</span>
+                            </div>
+                            <i class="fas fa-chevron-down module-icon"></i>
+                        </div>
+                        <div class="module-content">
+                            <ul class="lesson-list">
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-book-open"></i>
+                                        <span>Sifat keterbagian</span>
+                                    </div>
+                                    <span class="lesson-status status-ready hidden">Tersedia</span>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-lock"></i>
+                                        <span>Kongruensi Modulo</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-lock"></i>
+                                        <span>Order dan Akar Primitif</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-lock"></i>
+                                        <span>Persamaan Kongruensi</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                                <li class="lesson-item">
+                                    <div class="lesson-left">
+                                        <i class="fas fa-lock"></i>
+                                        <span>Uji Kompetensi</span>
+                                    </div>
+                                    <span class="lesson-status status-coming">Segera Hadir</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Prasyarat -->
+            <section class="content-section">
+                <h2 class="section-title">Prasyarat Mengikuti Bacaan Ini</h2>
+                <ul class="prereq-list">
+                    <li>Pemahaman yang solid terhadap kurikulum matematika dasar tingkat SMP dan awal SMA.</li>
+                    <li>Terbiasa melakukan operasi aljabar fundamental.</li>
+                    <li>Penguasaan terhadap teorema Pythagoras, perhitungan sudut dasar, serta sifat-sifat awal dari bangung datar.</li>
+                    <li>Kesedian penuh untuk mempelajari "mengapa" sebuah rumus bekerja melalui proses pembuktian, alih-alih hanya sekadar menghafal "bagaimana" menggunakannya.</li>
+                    <li>Kesiapan mental untuk menghadapi soal-soal rumit yang tidak bisa diselesaikan hanya dalam satu atau dua langkah, serta pantang menyerah saat menemui jalan buntu.</li>
+                    <li>Tidak terikat pada satu cara multak. Siap untuk mengekspolorasi berbagai sudut pandang dan pendekatan berbeda dalam memecahkan satu masalah matematika yang sama.</li>
+                </ul>
+            </section>
+
+        </div>
+
+        <!-- RIGHT COLUMN: STICKY SIDEBAR -->
+        <aside class="sidebar">
+            <div class="enroll-card">
+                
+                <div class="card-thumbnail">
+                    <!-- Icon untuk Jupyter Book/Bacaan -->
+                    <i class="fas fa-square-root-variable"></i>
+                </div>
+                
+                <div class="card-body">
+                    <div class="price-wrapper">
+                        <div class="price">
+                            Gratis Akses
+                        </div>
+                    </div>
+
+                    <!-- Sesuaikan Href ini ke link Jupyter Book mu -->
+                    <a href="../osn-matematika-sma" target="_blank" class="btn-enroll">Mulai Belajar Sekarang</a>
+                    <p style="font-size: 0.75rem; text-align: center; color: var(--text-gray); margin-bottom: 2rem;">Akses langsung via web. Tanpa perlu install aplikasi.</p>
+
+                    <h4 class="includes-title">Fitur Pustaka Ini:</h4>
+                    <ul class="includes-list">
+                        <li class="includes-item">
+                            <i class="fas fa-check"></i>
+                            <span><b>Akses 100% Gratis</b>, tidak ada fitur yang dikunci atau berbayar.</span>
+                        </li>
+                        <li class="includes-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Format web interaktif menggunakan <b>Jupyter Book</b>.</span>
+                        </li>
+                        <li class="includes-item">
+                            <i class="fas fa-square-root-variable"></i>
+                            <span>Rumus dirender tajam dengan <b>LaTeX & MathJax</b>.</span>
+                        </li>
+                        <li class="includes-item">
+                            <i class="fas fa-search"></i>
+                            <span>Fitur <b>Pencarian (Search)</b> bawaan buku untuk mencari tahun/topik soal dengan cepat.</span>
+                        </li>
+                        <li class="includes-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Desain responsif, sangat nyaman dibaca via HP maupun Layar Lebar (Desktop/Tablet).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-logo font-mono">
+                        &lt;MuhaCode/&gt;
+                    </a>
+                    <p class="footer-text">Membangun pemahaman teknologi melalui fondasi matematika yang kuat. Belajar
+                        coding bukan sekadar menghafal sintaks, tapi memahami logika.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="../course/">Course</a></li>
+                        <li><a href="../roadmap/">Roadmap</a></li>
+                        <li><a href="../service/">Layanan</a></li>
+                        <li><a href="../portfolio/">Portofolio</a></li>
+                        <li><a href="../blog/">Blog</a></li>
+                        <li><a href="../resource">Resource</a></li>
+                    </ul>
+                </div>
+
+                <div style="display: none;">
+                    <h4 class="footer-title">Donasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-heart" style="color: #f56565; margin-right: 5px;"></i>
+                                Saweria</a></li>
+                        <li><a href="#"><i class="fas fa-hamburger" style="color: #fbbf24; margin-right: 5px;"></i>
+                                Trakteer</a></li>
+                        <li><a href="#"><i class="fab fa-paypal" style="color: #60a5fa; margin-right: 5px;"></i>
+                                PayPal</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Social</h4>
+                    <div class="social-row">
+                        <a href="https://github.com/muharsyad" style="--icon-color: #fff" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/muharsyad/" style="--icon-color: #3b82f6"
+                            target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.youtube.com/@muhacode" style="--icon-color: #f56565" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/muhacode" style="--icon-color: #E91E63" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://arsyadmuh.medium.com/" style="--icon-color: #fff" target="_blank"><i
+                                class="fab fa-medium"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Muhacode. All rights reserved.</p>
+                <p class="font-mono" style="color: #374151;">Code is just applied Math & Logic.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/course-detail.js"></script>
+</body>
+</html>
